@@ -1,2 +1,2 @@
-# Maps-
-Displays a map using MKMapView.  User is able to search for places and find them on the map.  
+# Maps
+The Maps App allows a user to search for an address or place and see it displayed on a map.  

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapsViewController">
+            <connections>
+                <outlet property="imageButton" destination="EIk-70-0iS" id="ojp-Sl-qfy"/>
+                <outlet property="mapView" destination="84a-oN-Dfc" id="3J1-kx-gEw"/>
+                <outlet property="mySearch" destination="Bdo-py-VZz" id="IuY-4m-nNd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="84a-oN-Dfc">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </mapView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAZ-fw-f3i">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="2Xo-Hw-xus"/>
+                        <constraint firstAttribute="width" constant="800" id="7kq-co-eJO"/>
+                        <constraint firstAttribute="height" constant="44" id="NAg-PX-MZb"/>
+                        <constraint firstAttribute="height" constant="44" id="VZp-7w-ShK"/>
+                        <constraint firstAttribute="width" constant="800" id="WTo-OF-ZT8"/>
+                        <constraint firstAttribute="width" secondItem="kAZ-fw-f3i" secondAttribute="height" multiplier="200:11" id="m2P-AY-HU4"/>
+                        <constraint firstAttribute="width" constant="800" id="qyA-Vn-GFJ"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem width="392" id="qeq-HL-WWO"/>
+                        <barButtonItem style="plain" id="4wY-Yj-91j">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Ho2-UO-Umk">
+                                <rect key="frame" x="201" y="6" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="setMap:" destination="-1" eventType="valueChanged" id="rlH-Nj-HJY"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2Xo-Hw-xus"/>
+                            <exclude reference="7kq-co-eJO"/>
+                            <exclude reference="NAg-PX-MZb"/>
+                            <exclude reference="VZp-7w-ShK"/>
+                            <exclude reference="WTo-OF-ZT8"/>
+                            <exclude reference="m2P-AY-HU4"/>
+                            <exclude reference="qyA-Vn-GFJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="2Xo-Hw-xus"/>
+                            <exclude reference="7kq-co-eJO"/>
+                            <exclude reference="NAg-PX-MZb"/>
+                            <exclude reference="VZp-7w-ShK"/>
+                            <exclude reference="WTo-OF-ZT8"/>
+                            <exclude reference="m2P-AY-HU4"/>
+                            <exclude reference="qyA-Vn-GFJ"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="KOI-sS-2Os"/>
+                    </connections>
+                </toolbar>
+                <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdo-py-VZz">
+                    <rect key="frame" x="0.0" y="43" width="600" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-70-0iS">
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="42"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="kAZ-fw-f3i" secondAttribute="centerX" id="4by-5v-7I5"/>
+                <constraint firstItem="84a-oN-Dfc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5WS-VL-uGY"/>
+                <constraint firstItem="Bdo-py-VZz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="9Vb-G7-WPV"/>
+                <constraint firstAttribute="bottom" secondItem="kAZ-fw-f3i" secondAttribute="bottom" constant="53" id="LnC-bc-gbO">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kAZ-fw-f3i" secondAttribute="bottom" id="Nk3-5u-nd5"/>
+                <constraint firstItem="84a-oN-Dfc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nru-0X-it2"/>
+                <constraint firstItem="kAZ-fw-f3i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NsV-b5-v1D"/>
+                <constraint firstAttribute="trailing" secondItem="kAZ-fw-f3i" secondAttribute="trailing" id="PTE-Kk-6qm"/>
+                <constraint firstItem="kAZ-fw-f3i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RvJ-nA-NlW"/>
+                <constraint firstAttribute="bottom" secondItem="kAZ-fw-f3i" secondAttribute="bottom" constant="53" id="WEh-Ha-8CJ"/>
+                <constraint firstAttribute="trailing" secondItem="kAZ-fw-f3i" secondAttribute="trailing" id="Zdv-k2-QFG"/>
+                <constraint firstAttribute="trailing" secondItem="Bdo-py-VZz" secondAttribute="trailing" id="gMX-62-WaT"/>
+                <constraint firstItem="kAZ-fw-f3i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hIC-9o-Tmh"/>
+                <constraint firstAttribute="trailing" secondItem="kAZ-fw-f3i" secondAttribute="trailing" id="hIF-HQ-tic"/>
+                <constraint firstAttribute="centerX" secondItem="kAZ-fw-f3i" secondAttribute="centerX" id="jTf-ZF-3cE"/>
+                <constraint firstAttribute="centerX" secondItem="kAZ-fw-f3i" secondAttribute="centerX" id="juJ-8q-fRK"/>
+                <constraint firstAttribute="trailing" secondItem="84a-oN-Dfc" secondAttribute="trailing" id="k5S-7F-hmU"/>
+                <constraint firstItem="Bdo-py-VZz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kO8-UC-ZAV"/>
+                <constraint firstAttribute="centerX" secondItem="kAZ-fw-f3i" secondAttribute="centerX" id="pYW-GA-569"/>
+                <constraint firstAttribute="bottom" secondItem="kAZ-fw-f3i" secondAttribute="bottomMargin" id="tL7-LY-N1J"/>
+                <constraint firstAttribute="bottom" secondItem="84a-oN-Dfc" secondAttribute="bottom" id="tkE-2a-CAG"/>
+                <constraint firstItem="Bdo-py-VZz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="w22-sC-5lJ"/>
+                <constraint firstAttribute="bottom" secondItem="kAZ-fw-f3i" secondAttribute="bottom" constant="53" id="zzb-wT-SGq"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="84a-oN-Dfc"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="5WS-VL-uGY"/>
+                    <exclude reference="Nru-0X-it2"/>
+                    <exclude reference="k5S-7F-hmU"/>
+                    <exclude reference="tkE-2a-CAG"/>
+                    <exclude reference="9Vb-G7-WPV"/>
+                    <exclude reference="4by-5v-7I5"/>
+                    <exclude reference="LnC-bc-gbO"/>
+                    <exclude reference="NsV-b5-v1D"/>
+                    <exclude reference="PTE-Kk-6qm"/>
+                    <exclude reference="RvJ-nA-NlW"/>
+                    <exclude reference="WEh-Ha-8CJ"/>
+                    <exclude reference="Zdv-k2-QFG"/>
+                    <exclude reference="hIC-9o-Tmh"/>
+                    <exclude reference="hIF-HQ-tic"/>
+                    <exclude reference="jTf-ZF-3cE"/>
+                    <exclude reference="juJ-8q-fRK"/>
+                    <exclude reference="pYW-GA-569"/>
+                    <exclude reference="tL7-LY-N1J"/>
+                    <exclude reference="zzb-wT-SGq"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="subviews">
+                    <include reference="84a-oN-Dfc"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="5WS-VL-uGY"/>
+                    <include reference="Nru-0X-it2"/>
+                    <include reference="k5S-7F-hmU"/>
+                    <include reference="tkE-2a-CAG"/>
+                    <exclude reference="4by-5v-7I5"/>
+                    <include reference="LnC-bc-gbO"/>
+                    <exclude reference="Nk3-5u-nd5"/>
+                    <include reference="NsV-b5-v1D"/>
+                    <exclude reference="PTE-Kk-6qm"/>
+                    <exclude reference="RvJ-nA-NlW"/>
+                    <exclude reference="WEh-Ha-8CJ"/>
+                    <include reference="Zdv-k2-QFG"/>
+                    <exclude reference="hIC-9o-Tmh"/>
+                    <exclude reference="hIF-HQ-tic"/>
+                    <include reference="jTf-ZF-3cE"/>
+                    <exclude reference="juJ-8q-fRK"/>
+                    <exclude reference="pYW-GA-569"/>
+                    <exclude reference="tL7-LY-N1J"/>
+                    <exclude reference="zzb-wT-SGq"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="224" y="446"/>
+        </view>
+    </objects>
+</document>
